@@ -1,9 +1,8 @@
 name: demo-action
 
 on:
-  push:
-    branches:
-      - main
+  issues:
+    types: [opened]
 
 jobs:
   build:
