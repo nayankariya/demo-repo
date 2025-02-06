@@ -1,0 +1,15 @@
+name: demo-action
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Enables manual trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a manual job
+        run: echo "Triggered manually or by push"
